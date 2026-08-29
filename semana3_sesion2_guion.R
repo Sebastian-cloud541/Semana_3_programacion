@@ -97,7 +97,7 @@ ingresos * ____
 ## Operar dos vectores: elemento a elemento -----------------------------------
 # 🔵 CORRE Y OBSERVA
 salario_nominal <- c(450000, 920000, 380000)
-ipc             <- c(1.000,  1.043,  1.087)
+ipc             <- c(1.000,  1.043,  1.087, 1.0)
 salario_nominal / ipc          # cada salario por su propio IPC
 
 # 💡 Mismo largo -> R opera POSICIÓN con posición (1º con 1º, 2º con 2º...).
@@ -113,7 +113,7 @@ anios   <- 2020:2023
 
 salario_real <- salario / ipc      # descuenta el efecto de la inflación
 round(salario_real)
-
+print(salario_real)
 # 🔮 PREDICE: ¿en qué años el salario real superó los 460.000?
 anios[salario_real > 460000]
 
@@ -121,7 +121,7 @@ anios[salario_real > 460000]
 #    El real corrige por inflación; el nominal engaña.
 
 # 🟢 TU TURNO: ¿en qué años el salario real fue MENOR a 450.000? (usa < )
-
+anios[salario_real < 450000]
 
 
 # -----------------------------------------------------------------------------
